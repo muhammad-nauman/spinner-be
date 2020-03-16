@@ -25,4 +25,6 @@ Route::middleware(['auth'])->group(function() {
         'products.inventories' => 'InventoryController',
         'machines' => 'MachineController'
     ]);
+
+    Route::get('barcodes', 'BarcodeController@index')->name('barcodes.index');
 });

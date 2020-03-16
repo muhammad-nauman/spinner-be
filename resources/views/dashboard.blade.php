@@ -4,6 +4,9 @@
 
 @section('content')
 <div class="row">
+    <a href="{{ route('barcodes.index') }}" class="btn btn-primary rounded">Export Barcodes</a>
+</div>
+<div class="row">
     <div class="col-lg-3">
         <div class="ibox float-e-margins">
             <div class="ibox-title">

@@ -20,9 +20,8 @@ class ApiController extends Controller
 
     public function products(Machine $machine)
     {
-        $products = Product::whereHas('inventories', function($query) use ($machine) {
-            $query->where('machine_id', $machine->id)->where('for_day', now()->toDateString());
-        })->withCount('inventories')->get();
+        $products = Product::with('inventories')->withCount('inventories')->get();
+
 
         return response()->json([
             'success' => true,
