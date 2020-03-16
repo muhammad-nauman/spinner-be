@@ -12,6 +12,6 @@ class BarcodesExport implements FromCollection
     */
     public function collection()
     {
-        return Barcode::select('barcode')->getq();
+        return Barcode::select('barcode')->get();
     }
 }
