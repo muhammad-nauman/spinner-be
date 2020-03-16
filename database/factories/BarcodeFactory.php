@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(Barcode::class, function (Faker $faker) {
     return [
-        'barcode' => $faker->numberBetween(100000, 500000),
+        'barcode' => $faker->numberBetween(10000000, 500000000),
     ];
 });
